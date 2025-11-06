@@ -1,1 +1,15 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Sansita+Swashed:wght@400;700&display=swap');
 @import "tailwindcss";
+
+.font-sansita {
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Optional: set global body font */
+body {
+  font-family: 'Poppins', sans-serif;
+}
