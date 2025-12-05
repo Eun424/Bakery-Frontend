@@ -1,4 +1,4 @@
-import bakeryImg from "../assets/images/Bakery-form.jpeg";
+
 
 const AuthStructure = ({ children }) => {
   return (
@@ -7,7 +7,7 @@ const AuthStructure = ({ children }) => {
         {/* Image Section */}
         <div className="w-full md:w-1/2 relative flex items-center justify-center p-6 bg-gray-50">
           <img
-            src={bakeryImg}
+            src="/images/Bakery-form.jpeg" // Use the public path
             alt="Bakery"
             className="rounded-lg w-full object-cover shadow-md"
           />

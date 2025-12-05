@@ -97,6 +97,7 @@ const Signup = () => {
               type={showPassword ? "text" : "password"}
               name="password"
               placeholder="Password"
+              minLength={8} 
               value={formData.password}
               onChange={handleChange}
               className="w-full px-4 py-3 rounded-xl border border-[#933C24] focus:outline-none focus:ring-2 focus:ring-[#933C24]"

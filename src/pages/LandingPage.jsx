@@ -2,32 +2,22 @@ import { useState, useEffect } from "react";
 import { GiCroissant, GiCupcake } from "react-icons/gi";
 import { FaArrowRight } from "react-icons/fa";
 
-// Import images
-import bakery1 from "../assets/images/Bakery-1.jpeg";
-import bakery2 from "../assets/images/Bakery-2.jpeg";
-import bakery3 from "../assets/images/Bakery-3.jpeg";
-import bakery4 from "../assets/images/Bakery-4.jpeg";
-import bakery5 from "../assets/images/Bakery-5.jpeg";
-import bakery6 from "../assets/images/Bakery-6.jpeg";
-import bakery7 from "../assets/images/Bakery-7.jpeg";
-import bakery8 from "../assets/images/Bakery-8.jpeg";
-import bakery9 from "../assets/images/Bakery-9.jpeg";
-import bakery10 from "../assets/images/Samosa.jpeg";
-
-import logo from "../assets/images/Bee_s_Bakery.png";
 
 const images = [
-  bakery1,
-  bakery2,
-  bakery3,
-  bakery4,
-  bakery5,
-  bakery6,
-  bakery7,
-  bakery8,
-  bakery9,
-  bakery10,
+  "/images/Bakery-1.jpeg",
+  "/images/Bakery-2.jpeg",
+  "/images/Bakery-3.jpeg",
+  "/images/Bakery-4.jpeg",
+  "/images/Bakery-5.jpeg",
+  "/images/Bakery-6.jpeg",
+  "/images/Bakery-7.jpeg",
+  "/images/Bakery-8.jpeg",
+  "/images/Bakery-9.jpeg",
+  "/images/Samosa.jpeg",
 ];
+
+
+const logo = "/images/Bee_s_Bakery.png";
 
 const LandingPage = () => {
   const [currentImage, setCurrentImage] = useState(0);

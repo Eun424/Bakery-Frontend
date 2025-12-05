@@ -1,9 +1,15 @@
 import { NavLink, useNavigate } from "react-router";
-import {FaChartBar,FaBoxOpen,FaWallet,FaSignOutAlt,FaUsers,FaClipboardList} from "react-icons/fa";
+import {
+  FaChartBar,
+  FaBoxOpen,
+  FaWallet,
+  FaSignOutAlt,
+  FaUsers,
+  FaClipboardList,
+} from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/features/authSlice";
 import { useState } from "react";
-import logo from "../assets/images/Bee_s_Bakery.png";
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const dispatch = useDispatch();
@@ -21,26 +27,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
   const links = [
     { to: "/dashboard", label: "Dashboard", icon: <FaChartBar size={20} /> },
-    {
-      to: "/dashboard/products",
-      label: "Products",
-      icon: <FaBoxOpen size={20} />,
-    },
-    {
-      to: "/dashboard/expenses",
-      label: "Expenses",
-      icon: <FaWallet size={20} />,
-    },
-    {
-      to: "/dashboard/customers",
-      label: "Customers",
-      icon: <FaUsers size={20} />,
-    },
-    {
-      to: "/dashboard/orders",
-      label: "Orders",
-      icon: <FaClipboardList size={20} />,
-    },
+    { to: "/dashboard/products", label: "Products", icon: <FaBoxOpen size={20} /> },
+    { to: "/dashboard/expenses", label: "Expenses", icon: <FaWallet size={20} /> },
+    { to: "/dashboard/customers", label: "Customers", icon: <FaUsers size={20} /> },
+    { to: "/dashboard/orders", label: "Orders", icon: <FaClipboardList size={20} /> },
   ];
 
   return (
@@ -65,19 +55,21 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
         }}
       >
         <div>
+          {/* Logo */}
           <div className="flex justify-center mb-8">
             <div
               className="flex items-center justify-center rounded-full p-2"
               style={{ backgroundColor: "#FF8C42" }}
             >
               <img
-                src={logo}
+                src="/images/Bee_s_Bakery.png"
                 alt="Bakery Logo"
                 className="h-24 w-24 object-contain"
               />
             </div>
           </div>
 
+          {/* Navigation Links */}
           <nav className="flex flex-col gap-4">
             {links.map((link) => (
               <NavLink
@@ -98,6 +90,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
           </nav>
         </div>
 
+        {/* Logout Button */}
         <div>
           <button
             onClick={() => setShowLogoutModal(true)}

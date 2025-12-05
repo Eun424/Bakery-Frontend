@@ -4,31 +4,22 @@ import { FiEdit, FiTrash2, FiSearch } from "react-icons/fi";
 import toast from "react-hot-toast";
 import {fetchOrders,addOrder,updateOrder,deleteOrder,clearMessages} from "../../store/features/ordersSlice.js";
 
-// Product images//
-import chocolateCake from "../assets/productimages/Chocolate_cake.png";
-import vanillaCake from "../assets/productimages/Vanilla_cake.png";
-import redvelvetCake from "../assets/productimages/Red_velvet.png";
-import butterBread from "../assets/productimages/Butter_bread.png";
-import sugarBread from "../assets/productimages/Sugar_Bread.png";
-import wheatBread from "../assets/productimages/Wheat_Bread.png";
-import chocolateBread from "../assets/productimages/Chocolate_bread.png";
-import meatPie from "../assets/productimages/Meat_Pies.png";
-import samosa from "../assets/productimages/Samosa_fries.png";
-import springRolls from "../assets/productimages/Springrolls_fries.png";
+
 
 // Product List//
 const products = [
-  { name: "Chocolate Cake", image: chocolateCake },
-  { name: "Vanilla cake", image: vanillaCake },
-  { name: "Red velvet", image: redvelvetCake },
-  { name: "Butter bread", image: butterBread },
-  { name: "Sugar bread", image: sugarBread },
-  { name: "Wheat bread", image: wheatBread },
-  { name: "Chocolate bread", image: chocolateBread },
-  { name: "Samosa", image: samosa },
-  { name: "Meatpie", image: meatPie },
-  { name: "Springrolls", image: springRolls },
+  { name: "Chocolate Cake", image: "/productimages/Chocolate_cake.png" },
+  { name: "Vanilla Cake", image: "/productimages/Vanilla_cake.png" },
+  { name: "Red Velvet", image: "/productimages/Red_velvet.png" },
+  { name: "Butter Bread", image: "/productimages/Butter_bread.png" },
+  { name: "Sugar Bread", image: "/productimages/Sugar_Bread.png" },
+  { name: "Wheat Bread", image: "/productimages/Wheat_Bread.png" },
+  { name: "Chocolate Bread", image: "/productimages/Chocolate_bread.png" },
+  { name: "Meat Pie", image: "/productimages/Meat_Pies.png" },
+  { name: "Samosa", image: "/productimages/Samosa_fries.png" },
+  { name: "Spring Rolls", image: "/productimages/Springrolls_fries.png" },
 ];
+
 
 const OrdersPage = () => {
   const dispatch = useDispatch();
